@@ -1,0 +1,13 @@
+# synthetic foggy insulator datasets
+
+# dataset
+# val: '/home/zzd/datasets/insulator/SFID_without_fog/fogged_v5_format/images/test'
+val: '/home/zzd/datasets/insulator/SFID/fogged_v5_format/images/test'
+
+# number of classes
+nc: 2
+
+
+# class names
+# names: ['prefect_insulator', 'defected_insulator', 'broken_piece']
+names: ['insulator', 'broken_piece']
