@@ -5,7 +5,7 @@ This project is Foggy Insulator Network (FINet), which contains the datasets and
 Paper：[link](link)
 
 
-![reuslts](link)
+![reuslts](https://github.com/zhangzhengde0225/FINet/blob/master/Docs/results.jpg)
 Fig.1 Detection results.
 复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷
  
@@ -16,6 +16,8 @@ Fig.1 Detection results.
 2.改进的网络SE-YOLOv5，实现晴天、雾天场景下均具有更强的鲁棒性的绝缘子及其缺陷检测模型。
 
 3.数据集和代码开源。
+
+wuhu
 
 # Datasets
 1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](xxx).
