@@ -1,5 +1,5 @@
 
-This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
+This project is Foggy Insulator Network (FINet), which contains the datasets and source code for the paper 
 "Insulator data enhancement and detection method based on synthetic fog and deep learning".
 
 Paper：[link](link)
@@ -17,14 +17,19 @@ Fig.1 Detection results.
 
 3.数据集和代码开源。
 
-wuhu
-
 # Datasets
-1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](xxx).
-2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
-  Download from [BaiduYun](xxxx).
-3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
-   Download from [BaiduYun](xxx).
+1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images.
+    
+    Download from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w). Code: jej3
+
+2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. 
+    
+    View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
+    Download from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q). Code: bcgw
+3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. 
+   
+    View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
+    Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA). Code: ik2j
 
 
 
@@ -41,3 +46,8 @@ xxx
 # License
 FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
 For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.
+
+# TODO
+Chinese
+
+Tutorial
