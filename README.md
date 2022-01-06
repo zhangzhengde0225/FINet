@@ -31,6 +31,10 @@ Fig.1 Detection results.
     View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
     Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA). Code: ik2j
 
+# Trained Weights
+
+You can download training logs and weights from [here](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA) (Code: pupm) to 
+reproduce the experimental results in the paper.
 
 
 # Contributors
