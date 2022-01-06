@@ -20,21 +20,22 @@ Fig.1 Detection results.
 # Datasets
 1. **Synthetic Fogged Insulator Dataset, SFID** (Ours). 2021. About 13700 images.
     
-    Download from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w). Code: jej3
+    Download **SFID** from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w). Code: jej3
 
 2. **Unifying Public Insulator Dataset, UPID**. 2020. About 6800 images. 
     
-    View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
-    Download from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q). Code: bcgw
+    View **UPID** from [Source project](https://github.com/heitorcfelix/public-insulator-datasets).
+    Download **UPID** from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q). Code: bcgw
 3. **Chinese Power Line Insulator Dataset, CPLID**. 2018. About 800 images. 
    
-    View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
-    Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA). Code: ik2j
+    View **CPLID** from [Source project](https://github.com/InsulatorData/InsulatorDataSet).
+    Download **CPLID** from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA). Code: ik2j
 
 # Trained Weights
 
-You can download training logs and weights from [here](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA) (Code: pupm) to 
-reproduce the experimental results in the paper.
+You can download training logs and weights to reproduce the experimental results in the paper.
+
+Download **weights** from [BaiduYun](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA). Code: pupm
 
 
 # Contributors
