@@ -30,7 +30,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -153,7 +153,7 @@
       <workItem from="1641310720729" duration="34000" />
       <workItem from="1641310785365" duration="3831000" />
       <workItem from="1641549722240" duration="974000" />
-      <workItem from="1641550765248" duration="320000" />
+      <workItem from="1641550765248" duration="503000" />
     </task>
     <task id="LOCAL-00001" summary="zb update">
       <created>1641550847130</created>
@@ -162,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641550847130</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="zb update">
+      <created>1641551095664</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641551095664</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
