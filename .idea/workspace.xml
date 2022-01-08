@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="zb update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/README_zh_cn.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/README_zh_cn.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
