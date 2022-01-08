@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="zb update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/dmfem.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1xtrgMyeFBkwuvN50QRVlYDbKxf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -153,9 +155,13 @@
       <workItem from="1640770697657" duration="2000" />
       <workItem from="1641310694403" duration="4000" />
       <workItem from="1641310720729" duration="34000" />
-      <workItem from="1641310785365" duration="3831000" />
-      <workItem from="1641549722240" duration="974000" />
-      <workItem from="1641550765248" duration="1244000" />
+      <workItem from="1641310785365" duration="5653000" />
+      <workItem from="1641375184063" duration="1159000" />
+      <workItem from="1641378739952" duration="1708000" />
+      <workItem from="1641437237902" duration="143000" />
+      <workItem from="1641475574279" duration="1442000" />
+      <workItem from="1641479145245" duration="501000" />
+      <workItem from="1641542517760" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="zb update">
       <created>1641550847130</created>
@@ -178,7 +184,35 @@
       <option name="project" value="LOCAL" />
       <updated>1641551388343</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update weights url">
+      <created>1641475988082</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641475988082</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update weights url">
+      <created>1641476347234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641476347234</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1641479915689</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1641479915689</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <created>1641547495046</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1641547495046</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,8 +230,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="zb update" />
-    <option name="LAST_COMMIT_MESSAGE" value="zb update" />
+    <MESSAGE value="update datateset url" />
+    <MESSAGE value="upp" />
+    <MESSAGE value="update weights url" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InsulatorNet$check_dataset.coverage" NAME="check_dataset Coverage Results" MODIFIED="1631188586647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public-insulator-datasets-master" />
