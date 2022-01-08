@@ -1,35 +1,29 @@
 
-This project is Foggy Insulator Network (FINet), which contains the datasets and source code for the paper 
+This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
 "Insulator data enhancement and detection method based on synthetic fog and deep learning".
 
 Paper：[link](link)
 
 
-![reuslts](https://github.com/zhangzhengde0225/FINet/blob/master/Docs/results.jpg)
+![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
 Fig.1 Detection results.
-复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷
+Insulator and its defect detection effect in complex environment.(a) Simple background, (b) Simple background and mist, (c) Defect in dense fog, (d) Sky background, (e) Different scales, (f) Vertical insulator + medium fog, (g) Truncated insulator, (h) Blurred image, (d) No defect in dense fog
  
 
 # Highlights
-1.基于暗通道先验的加雾算法和加雾算法优化，提供了生成的约13700张图的绝缘子数据集。
+1. This project realizes the fogging algorithm and the optimization of fogging algorithm based on the dark channel prior, and provides an insulator data set of about 13,700 images generated.
 
-2.改进的网络SE-YOLOv5，实现晴天、雾天场景下均具有更强的鲁棒性的绝缘子及其缺陷检测模型。
+2. The improved network SE-YOLOv5 realizes a more robust insulator and defect detection model in both sunny and foggy scenarios.
 
-3.数据集和代码开源。
+3. The dataset and codes are public.
+
 
 # Datasets
-1. **Synthetic Fogged Insulator Dataset, SFID** (Ours). 2021. About 13700 images.
-    
-    Download **SFID** from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w). Code: jej3
-
-2. **Unifying Public Insulator Dataset, UPID**. 2020. About 6800 images. 
-    
-    View **UPID** from [Source project](https://github.com/heitorcfelix/public-insulator-datasets).
-    Download **UPID** from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q). Code: bcgw
-3. **Chinese Power Line Insulator Dataset, CPLID**. 2018. About 800 images. 
-   
-    View **CPLID** from [Source project](https://github.com/InsulatorData/InsulatorDataSet).
-    Download **CPLID** from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA). Code: ik2j
+1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](xxx).
+2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
+  Download from [BaiduYun](xxxx).
+3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
+   Download from [BaiduYun](xxx).
 
 # Trained Weights
 
@@ -37,6 +31,71 @@ You can download training logs and weights to reproduce the experimental results
 
 Download **weights** from [BaiduYun](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA). Code: pupm
 
+# Install
+```
+git clone https://github.com/zhangzhengde0225/FINet.git
+```
+# Quick start
+## Docker
+
+```
+docker pull zhangbo2020/finet:v1  # get the docker image
+
+# Establish a container running image, use the host GPU to map the host project code and data set to the container
+
+docker run -i -t --gpus all -v /home/XX/FINet:/home/FINet -v /home/XX/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
+
+# example
+docker run -i -t --gpus all -v /home/XX/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
+```
+
+## Synthetic fogging
+After you get the FINet code, type:
+
+```
+cd /home/FINet/FINet/scripts/  
+python synthetic_fog.py        # default 
+```
+The main optional arguments:
+```
+--speed_up  #matrix optimization caculation
+--img       #input image size
+--out       #output image size
+```
+
+## Training
+Once you get the FINet code, configure the environment and download the dataset, juse type:
+
+```
+cd home/FINet/FINet/
+python train.py --trainset_path /home/datasets/insulator/SFID
+```
+The main optional arguments:
+```
+--trainset_path #trainset path
+--batch-size    #batch size
+--img-size      #image size
+```
+
+## Inference
+
+
+```
+cd home/FINet/FINet/
+
+#testset_path set: FINet/FINet/sources/sfid.yaml
+#foggy model inference
+
+python test.py --weights /home/datasets/insulator/runs/m_ep99_fogged/weights/best.pt
+
+#model without fog inference
+
+python test.py --weights /home/datasets/insulator/runs/m_ep99_without_fog/weights/best.pt
+
+#foggy model with SE module inference
+
+python test.py --weights /home/datasets/insulator/runs/se_m_ep99_fogged/weights/best.pt
+```
 
 # Contributors
 FINet is authored by xxx, Zhengde Zhang*.
@@ -51,8 +110,3 @@ xxx
 # License
 FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
 For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.
-
-# TODO
-Chinese
-
-Tutorial
