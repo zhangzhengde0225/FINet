@@ -46,7 +46,7 @@ docker pull zhangbo2020/finet:v1  # get the docker image
 docker run -i -t --gpus all -v /home/XX/FINet:/home/FINet -v /home/XX/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
 
 # example
-docker run -i -t --gpus all -v /home/XX/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
+docker run -i -t --gpus all -v /home/zb/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
 ```
 
 ## Synthetic fogging
@@ -59,8 +59,8 @@ python synthetic_fog.py        # default
 The main optional arguments:
 ```
 --speed_up  #matrix optimization caculation
---img       #input image size
---out       #output image size
+--img       #input image path
+--out       #output image path
 ```
 
 ## Training
