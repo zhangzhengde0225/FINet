@@ -3,6 +3,7 @@
 Produced by: zhangzhengde@sjtu.edu.cn
 """
 import os
+import argparse
 import math
 import cv2
 import time
@@ -15,8 +16,8 @@ class SyntheticFog(object):
     def __init__(self):
         pass
 
-    def __call__(self):
-        img_path = '../sources/insulator1.jpg'
+    def __call__(self,speed_up, img_path , out_path):
+        img_path = img_path
         # img_path = '../sources/IMG_6685.JPG'
         assert os.path.exists(img_path), f'error: img does not exists, {img_path}'
         img = cv2.imread(img_path)
@@ -28,7 +29,7 @@ class SyntheticFog(object):
         th = 0.05
         fogged_img = self.fogging_img(
             img, brightness=br, thickness=th,
-            high_efficiency=True)
+            high_efficiency = speed_up)
         print(f'fogging time: {(time.time()-t0)*1000:.4f}ms')
         rf = 1  # resize factor
         img = cv2.resize(img, (int(img.shape[1]*rf), int(img.shape[0]*rf)))
@@ -37,9 +38,9 @@ class SyntheticFog(object):
         # cv2.imshow('src', img)
         # cv2.imshow('fogged', fogged_img)
         # cv2.waitKey(0)
-        cv2.imwrite(f'../sources/fogged/{Path(img_path).stem}_br{br}_th{th}.jpg', fogged_img)
+        cv2.imwrite(out_path+f'{Path(img_path).stem}_br{br}_th{th}.jpg', fogged_img)
 
-    def fogging_img(self, img, brightness=0.7, thickness=0.05, high_efficiency=True):
+    def fogging_img(self, img, brightness=0.7, thickness=0.05, high_efficiency = False):
         """
         fogging image
         :param img: src img
@@ -103,8 +104,14 @@ class SyntheticFog(object):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog='synthetic_fog.py')
+    parser.add_argument('--speed_up', type=bool, default= False, help='matrix optimization')
+    parser.add_argument('--img', type=str, default= '../sources/insulator1.jpg', help='source img path')
+    parser.add_argument('--out', type=str, default= '../sources/fogged/', help='output img path')
+    opt = parser.parse_args()
+    print(opt)
     synf = SyntheticFog()
-    synf()
+    synf(opt.speed_up,opt.img,opt.out)
 
 
 

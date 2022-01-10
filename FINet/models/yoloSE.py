@@ -8,9 +8,9 @@ import torch.nn as nn
 
 from models.commonSE import Conv, Bottleneck, SPP, DWConv, Focus, BottleneckCSP, Concat
 from models.experimental import MixConv2d, CrossConv, C3
-from FINet.utils.general import check_anchor_order, make_divisible, check_file
-from FINet.utils.torch_utils import (
-    time_synchronized, fuse_conv_and_bn, model_info, scale_img, initialize_weights, select_device)
+from utils.general import check_anchor_order, make_divisible, check_file #修改
+from utils.torch_utils import (
+    time_synchronized, fuse_conv_and_bn, model_info, scale_img, initialize_weights, select_device) #修改
 
 
 class Detect(nn.Module):
