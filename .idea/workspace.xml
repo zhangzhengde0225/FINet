@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/dmfem.py" beforeDir="false" />
+<<<<<<< HEAD
+    <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="zb update">
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/CPLID_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/CPLID_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/CPLID_train.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/CPLID_train.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/coco_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/coco_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/labels_defective.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/labels_defective.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/labels_normal.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/CPLID/labels_normal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/Tomaszewski_complete_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/Tomaszewski_complete_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/Tomaszewski_complete_train.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/Tomaszewski_complete_train.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/coco_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/coco_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/insulator_complete.csv" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/insulator_complete.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/labels_1pf_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/labels_1pf_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/labels_1pf_train.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/labels_1pf_train.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/merge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/select_one_per_folder.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/select_one_per_folder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/split_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski/split_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski_CPLID_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski_CPLID_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski_CPLID_train.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/Tomaszewski_CPLID_train.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/albumentations/data_augmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/albumentations/data_augmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/augmented_labels_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/augmented_labels_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/augmented_labels_train.json" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/augmented_labels_train.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/check_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/check_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/merge_Tomaszewski_CPLID.py" beforeDir="false" afterPath="$PROJECT_DIR$/FINet/repo/public-insulator-datasets-master/merge_Tomaszewski_CPLID.py" afterDir="false" />
     </list>
+=======
+    <list default="true" id="358c15ce-f931-4dcc-b228-18582085d02c" name="Default Changelist" comment="zb update" />
+>>>>>>> dev
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +47,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1xtrgMyeFBkwuvN50QRVlYDbKxf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -155,13 +179,11 @@
       <workItem from="1640770697657" duration="2000" />
       <workItem from="1641310694403" duration="4000" />
       <workItem from="1641310720729" duration="34000" />
-      <workItem from="1641310785365" duration="5653000" />
-      <workItem from="1641375184063" duration="1159000" />
-      <workItem from="1641378739952" duration="1708000" />
-      <workItem from="1641437237902" duration="143000" />
-      <workItem from="1641475574279" duration="1442000" />
-      <workItem from="1641479145245" duration="501000" />
-      <workItem from="1641542517760" duration="983000" />
+      <workItem from="1641310785365" duration="3831000" />
+      <workItem from="1641549722240" duration="974000" />
+      <workItem from="1641550765248" duration="2492000" />
+      <workItem from="1641569398165" duration="1460000" />
+      <workItem from="1641793380586" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="zb update">
       <created>1641550847130</created>
@@ -184,35 +206,49 @@
       <option name="project" value="LOCAL" />
       <updated>1641551388343</updated>
     </task>
-    <task id="LOCAL-00004" summary="update weights url">
-      <created>1641475988082</created>
+    <task id="LOCAL-00004" summary="zb update">
+      <created>1641552316582</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1641475988082</updated>
+      <updated>1641552316582</updated>
     </task>
-    <task id="LOCAL-00005" summary="update weights url">
-      <created>1641476347234</created>
+    <task id="LOCAL-00005" summary="zb update">
+      <created>1641569483742</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1641476347234</updated>
+      <updated>1641569483742</updated>
     </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1641479915689</created>
+    <task id="LOCAL-00006" summary="zb update">
+      <created>1641615909891</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1641479915689</updated>
+      <updated>1641615909891</updated>
     </task>
-    <task id="LOCAL-00007" summary="update">
-      <created>1641547495046</created>
+    <task id="LOCAL-00007" summary="zb update">
+      <created>1641741854150</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1641547495046</updated>
+      <updated>1641741854150</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="zb update">
+      <created>1641742238385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641742238385</updated>
+    </task>
+    <task id="LOCAL-00009" summary="zb update">
+      <created>1641793609738</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1641793609738</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,14 +264,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update datateset url" />
-    <MESSAGE value="upp" />
-    <MESSAGE value="update weights url" />
-    <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="zb update" />
+    <option name="LAST_COMMIT_MESSAGE" value="zb update" />
   </component>
+>>>>>>> dev
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InsulatorNet$check_dataset.coverage" NAME="check_dataset Coverage Results" MODIFIED="1631188586647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public-insulator-datasets-master" />
     <SUITE FILE_PATH="coverage/FoggyInsulatorNet$synthetic_fog.coverage" NAME="synthetic_fog Coverage Results" MODIFIED="1631587233837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />

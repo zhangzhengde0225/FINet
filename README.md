@@ -19,11 +19,11 @@ Insulator and its defect detection effect in complex environment.(a) Simple back
 
 
 # Datasets
-1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](xxx).
+1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w) Codes:jej3.
 2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
-  Download from [BaiduYun](xxxx).
+  Download from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) Codes:bcgw.
 3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
-   Download from [BaiduYun](xxx).
+   Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) Codes:ik2j.
 
 # Trained Weights
 
@@ -46,7 +46,7 @@ docker pull zhangbo2020/finet:v1  # get the docker image
 docker run -i -t --gpus all -v /home/XX/FINet:/home/FINet -v /home/XX/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
 
 # example
-docker run -i -t --gpus all -v /home/XX/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
+docker run -i -t --gpus all -v /home/zb/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
 ```
 
 ## Synthetic fogging
@@ -59,8 +59,8 @@ python synthetic_fog.py        # default
 The main optional arguments:
 ```
 --speed_up  #matrix optimization caculation
---img       #input image size
---out       #output image size
+--img       #input image path
+--out       #output image path
 ```
 
 ## Training

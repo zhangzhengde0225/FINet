@@ -23,8 +23,8 @@ git clone https://github.com/zhangzhengde0225/FINet.git
 # 数据集
 
 1. 合成雾绝缘子数据集,SFID(我们的),2021.  共约13700张图片，下载地址：[百度云](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w) 提取码：jej3
-2. 统一公共绝缘体数据集,UPID,2020.  共约6800张图片             下载地址：[百度云](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) 提取码：bcgw ，[github](https://github.com/heitorcfelix/public-insulator-datasets)地址
-3. 中国电力线绝缘子数据集,CPLID,2018.  共约800张图片        下载地址：[百度云](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) 提取码：ik2j，[github](https://github.com/InsulatorData/InsulatorDataSet)地址
+2. 统一公共绝缘体数据集,UPID,2020.  共约6800张图片             下载地址：[百度云](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) 提取码：bcgw ，[github](https://github.com/heitorcfelix/public-insulator-datasets) 地址
+3. 中国电力线绝缘子数据集,CPLID,2018.  共约800张图片        下载地址：[百度云](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) 提取码：ik2j，[github](https://github.com/InsulatorData/InsulatorDataSet) 地址
 
 # 模型
 
