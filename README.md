@@ -104,7 +104,7 @@ FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Do
 
 Currently, it is maintained by Bo Zhang (zhangbo20@sjtu.edu.cn) and Zheng-De Zhang (drivener@163.com).
  
-Please feel free contacting us if you have any question.
+Please feel free to contact us if you have any question.
 
 Homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
 
