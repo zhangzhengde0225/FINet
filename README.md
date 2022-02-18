@@ -102,7 +102,9 @@ python test.py --weights /home/datasets/insulator/runs/se_m_ep99_fogged/weights/
 # Contributors
 FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
 
-Currently, it is maintained by Bo Zhang and Zheng-De Zhang (drivener@163.com).
+Currently, it is maintained by Bo Zhang (zhangbo20@sjtu.edu.cn) and Zheng-De Zhang (drivener@163.com).
+ 
+Please feel free contacting us if you have any question.
 
 Homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
 
