@@ -1,8 +1,10 @@
 
-This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
-"Insulator data enhancement and detection method based on synthetic fog and deep learning".
 
-Paper：[link](link)
+## FINet
+This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
+"FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
+
+Paper link：[Unavailable because its in submission](link)
 
 
 ![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
@@ -98,9 +100,11 @@ python test.py --weights /home/datasets/insulator/runs/se_m_ep99_fogged/weights/
 ```
 
 # Contributors
-FINet is authored by xxx, Zhengde Zhang*.
+FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
 
-Currently, it is maintained by xxx, ZhengDe Zhang (drivener@163.com).
+Currently, it is maintained by Bo Zhang and Zheng-De Zhang (drivener@163.com).
+
+Homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
 
 # Citation
 ```
