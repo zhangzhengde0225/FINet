@@ -1,3 +1,5 @@
+#### [English](https://github.com/zhangzhengde0225/FINet) | 简体中文
+
 ## FINet
 本项目是Foggy Insulator Network (FINet), 包含论文《基于合成雾和深度学习的绝缘子数据增强和检测方法》的数据集和复现代码。
 
