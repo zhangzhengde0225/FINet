@@ -6,7 +6,7 @@
 This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
 "FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
 
-Paper link：[Unavailable now](link)
+Paper link：[Unavailable now][]
 
 
 ![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
