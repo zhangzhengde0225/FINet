@@ -5,8 +5,6 @@
 
 论文连接: [暂不可用](link)
 
-本项目为Foggy Insulator Network (FINet)，其中包含论文“基于合成雾和深度学习的绝缘体数据增强与检测方法”的数据集和源代码。
-
 ![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
 
 Fig.1  复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷
@@ -50,7 +48,7 @@ docker run -i -t --gpus all -v /home/XX/FINet:/home/FINet -v /home/XX/datasets:/
 docker run -i -t --gpus all -v /home/XX/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
 ```
 
-## 合成雾
+## 加雾算法脚本
 
 加雾算法：下载完代码以后执行
 
@@ -67,7 +65,7 @@ python synthetic_fog.py        #默认非优化方式加雾
 --out       #输出图片路径
 ```
 
-## 训练
+## 模型训练
 
 下载代码与数据集以后执行：
 
@@ -101,9 +99,22 @@ python test.py --weights /home/datasets/insulator/runs/se_m_ep99_fogged/weights/
 
 # 贡献者
 
-FINet 的作者是 xxx，张正德。
+FINet的作者是：张正德，张博，兰志才，刘海春，李东瀛，裴凌和郁文贤。
 
-目前由张正德（driverer@163.com）维护。
+目前由张博(zhangbo20@sjtu.edu.cn)和张正德（driverer@163.com）维护。
+
+如果您有任何问题，请随时与我们联系。
+
+张正德学术主页： [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
+
+# 引用
+```
+@article{FINet,s
+author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu},
+title={FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5},
+year={2022},
+}
+```
 
 # 许可
 
