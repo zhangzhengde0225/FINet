@@ -1,12 +1,14 @@
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/Docs/README_zh_cn.md)
 
+Please star this project if its helpful to you.
+
 ## FINet
 
 This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
 "FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
 
-Paper link：[Unavailable now][]
+Paper link：[Unavailable now](https://zhangzhengde0225.github.io)
 
 
 ![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
