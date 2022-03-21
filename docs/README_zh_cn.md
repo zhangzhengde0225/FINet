@@ -1,3 +1,12 @@
+[![Stars](https://img.shields.io/github/stars/zhangzhengde0225/FINet)](
+https://github.com/zhangzhengde0225/FINet)
+[![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/FINet)](
+https://github.com/zhangzhengde0225/FINet/issues)
+[![Datasets](https://img.shields.io/static/v1?label=Download&message=datasets&color=green)](
+https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
+[![Source Code](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
+https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
+
 #### [English](https://github.com/zhangzhengde0225/FINet) | 简体中文
 
 如果本项目对你有帮助，请右上角star支持一下。
@@ -11,7 +20,7 @@
 
 Fig.1  复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷
 
-# 亮点
+# Highlights
 
 1. 基于暗通道先验的加雾算法和加雾算法优化，提供了生成的约13700张图的绝缘子数据集。
 2. 改进的网络SE-YOLOv5，实现晴天、雾天场景下均具有更强的鲁棒性的绝缘子及其缺陷检测模型。
@@ -25,11 +34,10 @@ git clone https://github.com/zhangzhengde0225/FINet.git
 
 # 数据集
 
-1. 合成雾绝缘子数据集,SFID(我们的),2021.  共约13700张图片，下载地址：[百度云](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w) 提取码：jej3
-2. 统一公共绝缘体数据集,UPID,2020.  共约6800张图片             下载地址：[百度云](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) 提取码：bcgw ，[github](https://github.com/heitorcfelix/public-insulator-datasets) 地址
-3. 中国电力线绝缘子数据集,CPLID,2018.  共约800张图片        下载地址：[百度云](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) 提取码：ik2j，[github](https://github.com/InsulatorData/InsulatorDataSet) 地址
+下载数据集，请查看 [docs/dataset.md](
+https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 
-# 模型
+# 权重文件
 
 您可以下载训练日志和权重来重现论文中的实验结果。
 
@@ -107,7 +115,7 @@ FINet的作者是：张正德，张博，兰志才，刘海春，李东瀛，裴
 
 如果您有任何问题，请随时与我们联系。
 
-张正德学术主页： [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
+学术主页： [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
 
 # 引用
 ```
