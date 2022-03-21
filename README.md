@@ -3,9 +3,9 @@ https://github.com/zhangzhengde0225/FINet)
 [![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/FINet)](
 https://github.com/zhangzhengde0225/FINet/issues)
 [![Datasets](https://img.shields.io/static/v1?label=Download&message=datasets&color=green)](
-https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
-[![Datasets](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
-https://github.com/zhangzhengde0225/CDNet/archive/refs/heads/master.zip)
+https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
+[![Source Code](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
+https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
