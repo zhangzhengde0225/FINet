@@ -21,7 +21,7 @@ Download **UPID** (3.57G) from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5h
 
 Download **UPID** (3.57G) from [Google Drive](
 s
-)
+).
 
 ## CPLID
 The Chinese Power Line Insulator Dataset (CPLID) was created in 2018 by Tao Xian, 
@@ -32,4 +32,4 @@ View **CPLID Source** from [Github](https://github.com/InsulatorData/InsulatorDa
 Download **CPLID** (408M) from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA), Codes: ik2j.
 Download **CPLID** (408M) from [Google Drive](
 2
-)
+).
