@@ -33,8 +33,8 @@ Insulator and its defect detection effect in complex environment.(a) Simple back
 
 
 # Datasets
-To download the datasets, please refer to [docs/dataset.md](
-https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
+To download the datasets of insulators and defects, please refer to [docs/dataset.md](
+https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 
 # Trained Weights
 
