@@ -119,7 +119,7 @@ Personal page of Zheng-De Zhang: [zhangzhengde0225.github.io](https://zhangzheng
 
 # Citation
 ```
-@article{FINet,s
+@article{FINet,
 author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu},
 title={FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5},
 year={2022},
