@@ -1,5 +1,13 @@
+[![Stars](https://img.shields.io/github/stars/zhangzhengde0225/FINet)](
+https://github.com/zhangzhengde0225/FINet)
+[![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/FINet)](
+https://github.com/zhangzhengde0225/FINet/issues)
+[![Datasets](https://img.shields.io/static/v1?label=Download&message=datasets&color=green)](
+https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
+[![Datasets](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
+https://github.com/zhangzhengde0225/CDNet/archive/refs/heads/master.zip)
 
-#### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/Docs/README_zh_cn.md)
+#### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
 Please star this project if its helpful to you.
 
@@ -25,11 +33,8 @@ Insulator and its defect detection effect in complex environment.(a) Simple back
 
 
 # Datasets
-1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w) Codes:jej3.
-2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
-  Download from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) Codes:bcgw.
-3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
-   Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) Codes:ik2j.
+Download dataset, refers to [docs/dataset.md](
+https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
 # Trained Weights
 
