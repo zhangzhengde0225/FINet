@@ -1,8 +1,24 @@
 
+# Datasets
 
+## SFID(Ours)
 
-1. Synthetic Fogged Insulator Dataset, SFID (Ours). 2021. About 13700 images. Download from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w) Codes:jej3.
-2. Unifying Public Insulator Dataset, UPID. 2020. About 6800 images. View from [Source](https://github.com/heitorcfelix/public-insulator-datasets).
-  Download from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q) Codes:bcgw.
-3. Chinese Power Line Insulator Dataset, CPLID. 2018. About 800 images. View from [Source](https://github.com/InsulatorData/InsulatorDataSet).
-   Download from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA) Codes:ik2j.
+The Synthetic Fogged Insulator Dataset (SFID) was created in 2021 by us, and contains about 13700 insulator and detect images.
+
+Download **SFID** from [BaiduYun](https://pan.baidu.com/s/1jpqrtMOlln9xC_L2_tGu7w), Codes: jej3.
+
+## UPID
+The Unifying Public Insulator Dataset (UPID) was created in 2020 by Andrel, 
+and contains aoubt 6800 images. 
+
+View **SPID Source** from [Github](https://github.com/heitorcfelix/public-insulator-datasets).
+
+Download **UPID** from [BaiduYun](https://pan.baidu.com/s/1pvk0tCbyJiP5hjakrTTI4Q), Codes: bcgw.
+
+## CPLID
+The Chinese Power Line Insulator Dataset (CPLID) was created in 2018 by Tao Xian, 
+and contains about 800 images. 
+
+View **CPLID Source** from [Github](https://github.com/InsulatorData/InsulatorDataSet).
+
+Download **CPLID** from [BaiduYun](https://pan.baidu.com/s/1BQnZSCTPGQsEOKOe1Z4sXA), Codes: ik2j.
