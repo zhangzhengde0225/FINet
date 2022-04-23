@@ -18,10 +18,11 @@ This project is Foggy Insulator Network (FINet), which contains the datasets and
 
 Paper link：[Unavailable now](https://zhangzhengde0225.github.io)
 
+![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
 
-![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
-Fig.1 Detection results.
-Insulator and its defect detection effect in complex environment.(a) Simple background, (b) Simple background and mist, (c) Defect in dense fog, (d) Sky background, (e) Different scales, (f) Vertical insulator + medium fog, (g) Truncated insulator, (h) Blurred image, (d) No defect in dense fog
+Fig.1 Graphical Abstract of FINet.
+
+[//]: # (Insulator and its defect detection effect in complex environment.&#40;a&#41; Simple background, &#40;b&#41; Simple background and mist, &#40;c&#41; Defect in dense fog, &#40;d&#41; Sky background, &#40;e&#41; Different scales, &#40;f&#41; Vertical insulator + medium fog, &#40;g&#41; Truncated insulator, &#40;h&#41; Blurred image, &#40;d&#41; No defect in dense fog)
  
 
 # Highlights

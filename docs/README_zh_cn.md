@@ -16,9 +16,10 @@ https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
 
 论文连接: [暂不可用](https://zhangzhengde0225.github.io)
 
-![](https://github.com/zhangzhengde0225/FINet/raw/master/Docs/results.jpg)
+![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
+Fig.1 图形摘要
 
-Fig.1  复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷
+[//]: # (Fig.1  复杂环境下绝缘子及其缺陷检测效果。（a）简单背景；（b）简单背景和薄雾；（c）浓雾带缺陷；（d）天空背景；（e）不同尺度；（f）竖的绝缘子+中雾；（g）被截绝缘子；（h）模糊图像；（d）浓雾无缺陷)
 
 # Highlights
 
