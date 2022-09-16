@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="3080-office" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="siyuan" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="3080-office">
         <serverdata>
           <mappings>
             <mapping deploy="PycharmProject/FoggyInsulatorNet" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="siyuan">
+        <serverdata>
+          <mappings>
+            <mapping deploy="PycharmProject/FINet" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="zzd@192.168.3.111:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="PycharmProject/FoggyInsulatorNet" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

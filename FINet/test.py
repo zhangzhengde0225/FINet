@@ -255,8 +255,7 @@ def test(data,
 		maps[c] = ap[i]
 	return (mp, mr, map50, map, *(loss.cpu() / len(dataloader)).tolist()), maps, t
 
-
-if __name__ == '__main__':
+def get_opt():
 	parser = argparse.ArgumentParser(prog='test.py')
 	parser.add_argument('--weights', nargs='+', type=str,
 						default='runs/m_ep99_fogged/weights/best.pt',
@@ -275,11 +274,14 @@ if __name__ == '__main__':
 	parser.add_argument('--verbose', action='store_true', help='report mAP by class')
 	parser.add_argument('--save-txt', action='store_true', help='save results to *.txt')
 	parser.add_argument(f'--show-each-cls', action='store_true', help='show evaluation of each class')
+	parser.add_argument(f'-p', '--policy', default=None, help='preset test policy')
 	opt = parser.parse_args()
 	opt.save_json |= opt.data.endswith('coco.yaml')
 	opt.data = check_file(opt.data)  # check file
 	print(opt)
+	return opt
 
+def run(opt):
 	if opt.task in ['val', 'test']:  # run normally
 		test(opt.data,
 			 opt.weights,
@@ -304,4 +306,15 @@ if __name__ == '__main__':
 				y.append(r + t)  # results and times
 			np.savetxt(f, y, fmt='%10.4g')  # save
 		os.system('zip -r study.zip study_*.txt')
-		# plot_study_txt(f, x)  # plot
+
+
+def policy(opt):
+
+	return opt
+
+
+if __name__ == '__main__':
+	opt = get_opt()
+	if opt.policy:
+		opt = policy(opt)
+	run(opt)

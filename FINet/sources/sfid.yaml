@@ -3,7 +3,8 @@
 # dataset
 # val: '/home/zzd/datasets/insulator/SFID_without_fog/fogged_v5_format/images/test'
 # val: '/home/zzd/datasets/insulator/SFID/fogged_v5_format/images/test'
-val: '/home/datasets/insulator/SFID/images/test'
+#val: '/home/datasets/insulator/SFID/images/test'
+val: '/dssg/home/acct-seezzde/seezzde/datasets/insulator/SFID/images/test'
 # number of classes
 nc: 2
 
