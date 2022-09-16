@@ -1,5 +1,7 @@
+.DS_Store
 siyuan_job.slurm
 .idea
 FINet/repos/mmcv-master
 FINet/repos/mmdetection
+__pycache__
 
