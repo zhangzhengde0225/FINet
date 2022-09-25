@@ -6,18 +6,16 @@ https://github.com/zhangzhengde0225/FINet/issues)
 https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 [![Source Code](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
 https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
-[![Paper](https://img.shields.io/static/v1?label=Read_Paper&message=10.1109/TIM.2022.3194909&color=pink)](
-https://www.baidu.com)
+[![Paper](https://img.shields.io/static/v1?label=Read&message=paper&color=pink)](
+https://doi.org/10.1109/TIM.2022.3194909)
+
+# FINet
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
+This is the official implemtentation of Foggy Insulator Network (FINet) in the paper [FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5](https://doi.org/10.1109/TIM.2022.3194909)
+
 Please star this project if its helpful to you.
-
-## FINet
-
-This is the official implemtentation of Foggy Insulator Network (FINet), which contains the codes and datasets of paper "FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
-
-Paper：[10.1109/TIM.2022.3194909](https://doi.org/10.1109/TIM.2022.3194909)
 
 ![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
 
@@ -34,22 +32,24 @@ Fig.1 Graphical Abstract of FINet.
 3. The improved network SE-YOLOv5 realizes a more robust model in both sunny and foggy scenarios.
 
 
-# Datasets
-To download the datasets of insulators and defects, please refer to [docs/dataset.md](
+# Get Started
+
+## Dowload Datasets
+
+Download [Synthetic Foggy Insulator Dataset, SFID](https://pan.baidu.com/s/1ezl8S7Pf32b9fcylWYmzFQ), Verify codes: eb0j. For UPID and CPLID, please refer to [docs/dataset.md](
 https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 
-# Trained Weights
+## Download Trained Weights
 
 You can download training logs and weights to reproduce the experimental results in the paper.
 
 Download **weights** from [BaiduYun](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA). Code: pupm
 
-# Install
+## Download Source Code
 ```
 git clone https://github.com/zhangzhengde0225/FINet.git
 ```
-# Quick start
-## Docker
+## Start with Docker
 
 ```
 cd FINet
@@ -57,7 +57,7 @@ docker build -t finet .  # build docker image
 
 # run docker container
 docker run -it --gpus all --shm-size=8g \
-    -v your_code_path:/root/FINet \
+    -v .:/root/FINet \
     -v your_data_path:/root/datasets \
     --name finet finet
 ```
@@ -124,6 +124,8 @@ Personal page of Zheng-De Zhang: [zhangzhengde0225.github.io](https://zhangzheng
 @article{FINet,
 author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu},
 title={FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5},
+journal={IEEE T INSTRUM MEAS},
+doi={10.1109/TIM.2022.3194909},
 year={2022},
 }
 ```
