@@ -6,7 +6,7 @@ https://github.com/zhangzhengde0225/FINet/issues)
 https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 [![Source Code](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
 https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
-[![Paper](https://img.shields.io/static/v1?label=Read&message=source_code&color=pink)](
+[![Paper](https://img.shields.io/static/v1?label=Read Paper&message=10.1109/TIM.2022.3194909&color=pink)](
 https://www.baidu.com)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
