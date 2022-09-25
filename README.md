@@ -36,16 +36,16 @@ Fig.1 Graphical Abstract of FINet.
 
 ## Dowload Datasets
 
-Download [Synthetic Foggy Insulator Dataset, SFID](https://pan.baidu.com/s/1ezl8S7Pf32b9fcylWYmzFQ), Verify codes: eb0j. For UPID and CPLID, please refer to [docs/dataset.md](
+Download [SFID](https://pan.baidu.com/s/1ezl8S7Pf32b9fcylWYmzFQ) datasets, verify codes: **eb0j**. For UPID and CPLID, please refer to [docs/dataset.md](
 https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 
 ## Download Trained Weights
 
-You can download training logs and weights to reproduce the experimental results in the paper.
+The training logs and weights can be used to reproduce the experimental results.
 
-Download **weights** from [BaiduYun](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA). Code: pupm
+Download [Trained Weights](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA), verify code: **pupm**.
 
-## Download Source Code
+## Download Source Codes
 ```
 git clone https://github.com/zhangzhengde0225/FINet.git
 ```
