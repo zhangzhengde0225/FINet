@@ -1,4 +1,4 @@
-[![Stars](https://img.shields.io/github/stars/zhangzhengde0225/FINet)](
+[![Stars](https://img.shields.io/github/Stars/zhangzhengde0225/FINet)](
 https://github.com/zhangzhengde0225/FINet)
 [![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/FINet)](
 https://github.com/zhangzhengde0225/FINet/issues)
