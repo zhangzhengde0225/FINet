@@ -6,6 +6,8 @@ https://github.com/zhangzhengde0225/FINet/issues)
 https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 [![Source Code](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
 https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
+[![Paper](https://img.shields.io/static/v1?label=Read&message=source_code&color=pink)](
+https://www.baidu.com)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
@@ -13,10 +15,9 @@ Please star this project if its helpful to you.
 
 ## FINet
 
-This project is Foggy Insulator Network (FINet), which contains the datasets and reproduction code for the paper 
-"FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
+This is the official implemtentation of Foggy Insulator Network (FINet), which contains the codes and datasets of paper "FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5"
 
-Paper link：[Unavailable now](https://zhangzhengde0225.github.io)
+Paper：[10.1109/TIM.2022.3194909](https://doi.org/10.1109/TIM.2022.3194909)
 
 ![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
 
