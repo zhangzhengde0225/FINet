@@ -9,7 +9,7 @@ https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
-Please star this project if its helpful to you. xx
+Please star this project if its helpful to you.
 
 ## FINet
 
@@ -51,14 +51,14 @@ git clone https://github.com/zhangzhengde0225/FINet.git
 ## Docker
 
 ```
-docker pull zhangbo2020/finet:v1  # get the docker image
+cd FINet
+docker build -t finet .  # build docker image
 
-# Establish a container running image, use the host GPU to map the host project code and data set to the container
-
-docker run -i -t --gpus all -v /home/XX/FINet:/home/FINet -v /home/XX/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
-
-# example
-docker run -i -t --gpus all -v /home/zb/FINet:/home/zb/FINet -v /home/zb/datasets:/home/datasets zhangbo20/finet:v1 /bin/bash 
+# run docker container
+docker run -it --gpus all --shm-size=8g \
+    -v your_code_path:/root/FINet \
+    -v your_data_path:/root/datasets \
+    --name finet finet
 ```
 
 ## Synthetic fogging
