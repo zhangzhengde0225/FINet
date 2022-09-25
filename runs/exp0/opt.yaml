@@ -1,0 +1,30 @@
+cfg: ./FINet/models/yolov5m.yaml
+data: ./FINet/sources/sfid.yaml
+trainset_path: /home/zzd/datasets/insulator/SFID/fogged_v5_format
+not_use_SE: false
+hyp: ''
+epochs: 100
+batch_size: 32
+img_size:
+- 640
+- 640
+rect: false
+resume: ''
+nosave: false
+notest: false
+noautoanchor: false
+evolve: false
+bucket: ''
+cache_images: false
+weights: ''
+name: ''
+device: 0, 1
+multi_scale: false
+single_cls: false
+adam: false
+sync_bn: false
+local_rank: -1
+policy: null
+save_interval: null
+total_batch_size: 32
+world_size: 1
