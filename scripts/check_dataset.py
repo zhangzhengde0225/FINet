@@ -2,14 +2,19 @@
 检查生成的SFID数据集
 """
 import os, sys
+from tkinter.messagebox import NO
 import numpy as np
 import cv2
+import damei as dm
 from pathlib import Path
 import random
 
-sys.path.append('../..')
-from utils.datasets import LoadImages, LoadImagesAndLabels
-from utils.general import plot_one_box, xywh2xyxy
+pydir = Path(os.path.abspath(__file__)).parent
+if f'{pydir.parent}' not in sys.path:
+    sys.path.append(f'{pydir.parent}')
+
+from FINet.utils.datasets import LoadImages, LoadImagesAndLabels
+from FINet.utils.general import plot_one_box, xywh2xyxy
 
 
 class CheckDataset(object):
@@ -21,7 +26,7 @@ class CheckDataset(object):
         self.names = ['insulator', 'broken_piece']
 
     def __call__(self, *args, **kwargs):
-        trte = 'test'
+        trte = 'train'
         p = f'{self.dp}/images/{trte}'
 
         imgs = [f'{self.dp}/images/{trte}/{x}' for x in os.listdir(p) if x.endswith('.jpg')]
@@ -48,7 +53,7 @@ class CheckDataset(object):
                 bbox[3] *= h
                 plot_one_box(bbox, img, label=f'{self.names[int(cls)]}', color=self.colors[int(cls)])
 
-            print(f'stem: {stem} img: {img.shape} lb: {label}')
+            print(f'Stem: {stem}. Image shape: {img.shape}. Label: {label}')
             cr = np.any(label[:, 0] == 1)
             # cr = True
             if cr:
@@ -58,6 +63,16 @@ class CheckDataset(object):
 
 
 if __name__ == '__main__':
-    dataset_path = "/home/zzd/datasets/insulator/SFID/fogged_v5_format"
-    cd = CheckDataset(dp=dataset_path)
-    cd()
+    # dataset_path = "/home/zzd/datasets/insulator/SFID/fogged_v5_format"
+    dataset_path = f"{pydir.parent}/SFID_demo"
+    # dataset_path = '/home/zzd/datasets/hai_datasets/SFID'
+    # cd = CheckDataset(dp=dataset_path)
+    # cd()   
+ 
+
+    dm.data.check_YOLO(
+        dataset_path,
+        trte='train',  # 'train' or 'test'
+        save_dir=None, # None or 'path/to/save'
+        classes=['insulator', 'broken_piece'], 
+    )

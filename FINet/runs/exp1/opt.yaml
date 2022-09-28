@@ -1,6 +1,6 @@
-cfg: ./FINet/models/yolov5m.yaml
-data: ./FINet/sources/sfid.yaml
-trainset_path: /home/zzd/datasets/hai_datasets/SFID
+cfg: models/yolov5m.yaml
+data: sources/sfid.yaml
+trainset_path: /home/zzd/VSProjects/FINet/SFID
 not_use_SE: false
 hyp: ''
 epochs: 100
@@ -18,7 +18,7 @@ bucket: ''
 cache_images: false
 weights: ''
 name: ''
-device: '0'
+device: 0, 1
 multi_scale: false
 single_cls: false
 adam: false

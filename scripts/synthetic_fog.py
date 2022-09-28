@@ -2,14 +2,22 @@
 直接运行程序可以测试合成雾气效果
 Produced by: zhangzhengde@sjtu.edu.cn
 """
-import os
+import os, sys
+from pathlib import Path
 import argparse
 import math
+from tkinter import N
 import cv2
+import copy
 import time
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+
+pydir = Path(os.path.abspath(__file__)).parent
+if f'{pydir.parent}' not in sys.path:
+    sys.path.insert(0, f'{pydir.parent}')
+os.chdir(f'{pydir.parent}')
 
 
 class SyntheticFog(object):
@@ -20,7 +28,8 @@ class SyntheticFog(object):
         img_path = img_path
         # img_path = '../sources/IMG_6685.JPG'
         assert os.path.exists(img_path), f'error: img does not exists, {img_path}'
-        img = cv2.imread(img_path)
+        img = copy.copy(cv2.imread(img_path))
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         print(img.shape)
         img = img/255.0
         print(f'fogging...')
@@ -38,7 +47,20 @@ class SyntheticFog(object):
         # cv2.imshow('src', img)
         # cv2.imshow('fogged', fogged_img)
         # cv2.waitKey(0)
-        cv2.imwrite(out_path+f'{Path(img_path).stem}_br{br}_th{th}.jpg', fogged_img)
+        save = True if out_path else False
+        if save:
+            cv2.imwrite(out_path+f'{Path(img_path).stem}_br{br}_th{th}.jpg', fogged_img)
+        else:
+            h, w, c = img.shape
+            fig, ax = plt.subplots(1, 2, figsize=(w/100, h/100))
+            ax[0].imshow(img)
+            ax[1].imshow(fogged_img)
+            plt.show()
+
+            cv2.imshow('src', img)
+            cv2.imshow('fogged', fogged_img)
+            cv2.waitKey(0)
+
 
     def fogging_img(self, img, brightness=0.7, thickness=0.05, high_efficiency = False):
         """
@@ -105,13 +127,14 @@ class SyntheticFog(object):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='synthetic_fog.py')
-    parser.add_argument('--speed_up', type=bool, default= False, help='matrix optimization')
-    parser.add_argument('--img', type=str, default= '../sources/insulator1.jpg', help='source img path')
-    parser.add_argument('--out', type=str, default= '../sources/fogged/', help='output img path')
+    parser.add_argument('--speed_up', type=bool, default=True, help='matrix optimization')
+    parser.add_argument('--source', type=str, default= 'SFID_demo/images/train/001040.jpg', help='source img path')
+    parser.add_argument('--output', type=str, default=None, help='output img path')
     opt = parser.parse_args()
     print(opt)
     synf = SyntheticFog()
-    synf(opt.speed_up,opt.img,opt.out)
+    synf(opt.speed_up,opt.source, opt.output)
+
 
 
 
