@@ -1,7 +1,10 @@
 
 
 
-python train.py \
-    --trainset_path /home/zzd/datasets/hai_datasets/SFID \
-    --device 0 \
+# python train.py \
+#     --trainset_path /home/zzd/datasets/hai_datasets/SFID \
+#     --device 0 \
     
+hai models 
+
+hai train FINet

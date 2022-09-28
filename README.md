@@ -10,7 +10,6 @@ https://github.com/zhangzhengde0225/FINet/archive/refs/heads/master.zip)
 https://doi.org/10.1109/TIM.2022.3194909)
 
 # FINet
----
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
@@ -39,45 +38,41 @@ Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangz
 
 
 1. ##### Download Source Codes
-```bash
-git clone https://github.com/zhangzhengde0225/FINet.git
-cd FINet
-```
-2. ##### Download Datasets
-
-    You can download the Synthetic Foggy Insulator Dataset (SFID) two ways.
-
-+ 2.1 wget (Recommended)
-
     ```bash
-    wget -c -O SFID.zip https://ihepbox.ihep.ac.cn/ihepbox/index.php/s/adTHe1UPu0Vc7vI/
-    download
+    git clone https://github.com/zhangzhengde0225/FINet.git
+    cd FINet
     ```
-+ 2.2 browser
-    Click [here](https://ihepbox.ihep.ac.cn/ihepbox/index.php/s/adTHe1UPu0Vc7vI/download) to download.
+2. ##### Download Datasets and Training Weights
 
+    You can download the Synthetic Foggy Insulator Dataset (SFID) mulitple ways, we recommend you to use the following command:
+    ```bash
+    # Install hepai
+    pip install hepai 
 
-For other download ways and the UPID and CPLID datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
+    # View all datasets available
+    hai datasets info  
+    # download SFID, specify version by DATASET_NAME:VERSION, e.g. SFID:latest
+    hai datasets download SFID 
+    unzip SFID.zip
+    rm SFID.zip
+    ```
 
-## Download Trained Weights
+    The dataset is unzipped to the `SFID` folder, and the training logs in the `runs` folder.
 
-The training logs and weights can be used to reproduce the experimental results.
+    For other download ways and the UPID and CPLID datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
 
-Download [Trained Weights](https://pan.baidu.com/s/129ZTtU-0Hq6fVRv2q7LkEA), verify code: **pupm**.
+3. ##### Dependencies
+    You can simply set the environment via hai 
+    ```bash
+    hai set-envs
+    ```
 
+4. #### Training
+    ```bash
+    # train on SFID
+    python train.py --img 640 --batch 16 --epochs 300 --data SFID.yaml --weights yolov5s.pt --name yolov5s_results
+    ```
 
-## Start with Docker
-
-```
-cd FINet
-docker build -t finet .  # build docker image with name "finet"
-
-# run docker container
-docker run -it --gpus all --rm --shm-size=8g \
-    -v your_code_path:/root/FINet \
-    -v your_dataset_path:/root/SFID \
-    --name finet finet
-```
 
 ## Training
 
