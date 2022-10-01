@@ -124,7 +124,7 @@ Currently, it is maintained by Zheng-De Zhang (zdzhang@ihep.ac.cn) and Bo Zhang 
 
 If you have any questions, please new an [issue](https://github.com/zhangzhengde0225/FINet/issues) or feel free contact us by email, thank you for your attention!
 
-Please **Star** this project and **Cite** this paper if its helpful to you.
+Please **Star** this project and **Cite** this paper if its helpful to you .
 
 # Citation
 ```
@@ -140,3 +140,4 @@ Year={2022},
 # License
 THe FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
 For commercial queries, please drop an e-mail to zdzhang@ihep.a.cn, we will send the detail agreement to you.
+
