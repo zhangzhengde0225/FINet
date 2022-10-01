@@ -15,8 +15,6 @@ https://doi.org/10.1109/TIM.2022.3194909)
 
 This is the official implemtentation of Foggy Insulator Network in the paper [FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5](https://doi.org/10.1109/TIM.2022.3194909)
  
-Please **star** this project and **cite** this paper if its helpful to you.
-
 ![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
 
 Fig.1 Graphical Abstract of FINet.
@@ -94,7 +92,7 @@ hai --version  # check the version
     ```
 
 6. ## Inference [TODO]
-   The `HAI` provides simple way to deploy the `FINet` via docker and remote inference `API`, which can be used to detect insulators in images or videos.
+   The `HAI` provides simple way to deploy the `FINet` via docker and provides remote inference `API`, which can be used to detect insulators in images or videos.
     ```bash
     # Deploy the FINet in docker
     hai deploy --name FINet --image zhangzhengde0225/finet:latest
@@ -105,31 +103,28 @@ hai --version  # check the version
         [--device CPU/GPU]  # [optional] Default: GPU:0
         [--img-size IMAGE_SIZE]  # [optional] Default: 640
     ```
-    
 
-Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/tutorial.md).
-
-
-7. ## Synthetic fogging
+7. ## Synthetic fog
 
     You can use the `synthetic_fog.py` to generate foggy images. The fogging algorithm is based on the dark channel prior described in our paper, and the codes are availalbe now.
 
     ```bash
     python scripts/synthetic_fog.py
         [-s --source INPUT_PATH]  # [optional] Default: data/SFID_demo/images/train/001040.jpg
-        [--save-dir OUTPUT_PATH]  # [optional] Default: None
+        [--save-dir OUTPUT_PATH]  # [optional] Default: None, display it
         [--speed_up NEED_SPEED_UP]  # Default: False
     ```
 
+Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/tutorial.md).
  
 # Contributors
-The FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
+The FINet is authored by [Zheng-De Zhang](https://zhangzhengde0225.github.io)\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
 
 Currently, it is maintained by Zheng-De Zhang (zdzhang@ihep.ac.cn) and Bo Zhang (zhangbo20@sjtu.edu.cn) 
 
 If you have any questions, please new an [issue](https://github.com/zhangzhengde0225/FINet/issues) or feel free contact us by email, thank you for your attention!
 
-Personal page of Zheng-De Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
+Please **Star** this project and **Cite** this paper if its helpful to you.
 
 # Citation
 ```
