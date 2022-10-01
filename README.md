@@ -94,7 +94,7 @@ hai --version  # check the version
     ```
 
 6. ## Inference [TODO]
-   The `HAI` provides simple way to deploy the `FINet` by docker and remote inference `API`, which can be used to detect insulators in images or videos.
+   The `HAI` provides simple way to deploy the `FINet` via docker and remote inference `API`, which can be used to detect insulators in images or videos.
     ```bash
     # Deploy the FINet in docker
     hai deploy --name FINet --image zhangzhengde0225/finet:latest
