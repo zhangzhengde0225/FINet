@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import argparse
 import glob
 import math
@@ -7,9 +6,10 @@ import time
 from pathlib import Path
 from random import random
 pydir = Path(os.path.abspath(__file__)).parent
-sys.path.append(f'{pydir}/FINet')
+sys.path.append(f'{pydir}')
 
-import test
+import hai
+import FINet.test as test
 import numpy as np
 import torch.distributed as dist
 import torch.nn.functional as F
@@ -22,6 +22,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
+
 from models.yolo import Model
 from models.yoloSE import ModelSE
 from utils.datasets import create_dataloader
@@ -32,8 +33,6 @@ from utils.general import (
 from utils.google_utils import attempt_download
 from utils.torch_utils import init_seeds, ModelEMA, select_device
 
-
-# Hyperparameters
 hyp = {'lr0': 0.01,  # initial learning rate (SGD=1E-2, Adam=1E-3)
 	   'momentum': 0.937,  # SGD momentum/Adam beta1
 	   'weight_decay': 5e-4,  # optimizer weight decay
@@ -79,14 +78,16 @@ def train(hyp, opt, device, tb_writer=None):
 	# Configure
 	cuda = device.type != 'cpu'
 	init_seeds(2 + rank)
-	with open(opt.data) as f:
-		data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
+	# with open(opt.data) as f:
+	# 	data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
 	# train_path = data_dict['train']
 	train_path = f'{opt.trainset_path}/images/train'
 	# test_path = data_dict['val']
 	test_path = f'{opt.trainset_path}/images/test'
-	nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
-	assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
+	# nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
+	nc = 1 if opt.single_cls else int(len(opt.classes))
+	names = opt.classes
+	# assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
 
 	# Remove previous results
 	if rank in [-1, 0]:
@@ -358,9 +359,11 @@ def train(hyp, opt, device, tb_writer=None):
 			final_epoch = epoch + 1 == epochs
 			if not opt.notest or final_epoch:  # Calculate mAP
 				results, maps, times = test.test(opt.data,
+												 opt=opt,
 												 batch_size=total_batch_size,
 												 imgsz=imgsz_test,
-												 save_json=final_epoch and opt.data.endswith(os.sep + 'coco.yaml'),
+												 # save_json=final_epoch and opt.data.endswith(os.sep + 'coco.yaml'),
+												 save_json=final_epoch and opt.trainset_path.endswith(os.sep + 'coco.yaml'),
 												 model=ema.ema.module if hasattr(ema.ema, 'module') else ema.ema,
 												 single_cls=opt.single_cls,
 												 dataloader=testloader,
@@ -446,11 +449,14 @@ def run(opt):
 	if opt.local_rank in [-1, 0]:
 		check_git_status()
 	opt.cfg = check_file(opt.cfg)  # check file
-	opt.data = check_file(opt.data)  # check file
+	# opt.data = check_file(opt.data)  # check file
 	if opt.hyp:  # update hyps
-		opt.hyp = check_file(opt.hyp)  # check file
-		with open(opt.hyp) as f:
-			hyp.update(yaml.load(f, Loader=yaml.FullLoader))  # update hyps
+		print('type(opt.hyp):', type(opt.hyp))
+		if isinstance(opt.hyp, str):
+			opt.hyp = check_file(opt.hyp)  # check file
+			with open(opt.hyp) as f:
+				hyp.update(yaml.load(f, Loader=yaml.FullLoader))  # update hyps
+		
 	opt.img_size.extend([opt.img_size[-1]] * (2 - len(opt.img_size)))  # extend to 2 sizes (train, test)
 	device = select_device(opt.device, batch_size=opt.batch_size)
 	opt.total_batch_size = opt.batch_size
@@ -467,7 +473,7 @@ def run(opt):
 		assert opt.batch_size % opt.world_size == 0, '--batch-size must be multiple of CUDA device count'
 		opt.batch_size = opt.total_batch_size // opt.world_size
 
-	print(opt)
+	# print(opt)
 
 	# Train
 	if not opt.evolve:
@@ -556,14 +562,14 @@ def run(opt):
 
 
 def get_opt():
-	parser = argparse.ArgumentParser()
+	parser = hai.argparse.ArgumentParser()
 	parser.add_argument('--cfg', type=str, default='models/yolov5m.yaml', help='model.yaml path')
 	parser.add_argument('--data', type=str, default='sources/sfid.yaml', help='data.yaml path')
 	parser.add_argument('--trainset_path', type=str,
-						default='/home/zzd/datasets/insulator/SFID/fogged_v5_format',
+						default=f'~/datasets/hai_datasets/SFID',
 						help='the trainsets path in YOLOv5 format')
 	parser.add_argument('--not-use-SE', action='store_true', help='whether to YOLOv5 embedded in SE module')
-	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
+	parser.add_argument('--hyp', type=dict, default=hyp, help='hyp.yaml path (optional)')
 	parser.add_argument('--epochs', type=int, default=100)
 	parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
 	parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='train,test sizes')
@@ -644,47 +650,5 @@ if __name__ == '__main__':
 	if opt.policy:
 		opt = policy(opt)
 	run(opt)
-=======
-from hai_api import hai
-import argparse
-    
-def run(opt):
-    FINet = hai.hub.load('FINet')
-
-    # print(FINet)
-    FINet.switch_train()  # switch to train mode
-    
-    cfg = FINet.get_config()  # get the configs of the model in train mode
-
-    cfg.source = opt.source  # you can modify the `source` config here or in the config file
-    cfg.weights = opt.weights
-    cfg.epochs = opt.epochs
-    cfg.batch_size = opt.batch_size
-    cfg.device = opt.device
-    cfg.img_size = opt.img_size
-    
-    print(cfg)
-    
-    FINet.train()  # train the model with the modified configs
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-s', '--source', type=str,
-						default=f'data/SFID_demo',
-						help='the input source path')
-    parser.add_argument('-w', '--weights', type=str, default='', help='initial weights path')
-    parser.add_argument('--epochs', type=int, default=3, help='number of epochs')
-    parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
-    parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0, 1, 2, 3 or cpu')
-    parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='train,test sizes')
-    opt = parser.parse_args()
-    run(opt)
-    
-
-
-
-
->>>>>>> main
 
 

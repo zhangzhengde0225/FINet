@@ -15,9 +15,15 @@ from torch.utils.data import Dataset
 from tqdm import tqdm
 
  # from FINet.utils.general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first 修改
+<<<<<<< HEAD
 from utils.general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first
 
 help_url = 'https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data'
+=======
+from .general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first
+
+help_url = 'https://github.com/zhangzhengde0225/FINet'
+>>>>>>> main
 img_formats = ['.bmp', '.jpg', '.jpeg', '.png', '.tif', '.tiff', '.dng']
 vid_formats = ['.mov', '.avi', '.mp4', '.mpg', '.mpeg', '.m4v', '.wmv', '.mkv']
 
