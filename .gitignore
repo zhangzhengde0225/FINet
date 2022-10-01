@@ -1,12 +1,5 @@
 .DS_Store
 siyuan_job.slurm
-<<<<<<< HEAD
-.idea
-FINet/repos/mmcv-master
-FINet/repos/mmdetection
-__pycache__
-
-=======
 .idea/*
 FINet/repos/mmcv-master
 FINet/repos/mmdetection
@@ -20,4 +13,3 @@ test_batch0_pred.jpg
 SFID/*
 data/SFID/*
 runs/*
->>>>>>> main
