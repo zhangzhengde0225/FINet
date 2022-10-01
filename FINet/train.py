@@ -6,10 +6,10 @@ import time
 from pathlib import Path
 from random import random
 pydir = Path(os.path.abspath(__file__)).parent
-sys.path.append(f'{pydir}/FINet')
+sys.path.append(f'{pydir}')
 
 import hai
-import test
+import FINet.test as test
 import numpy as np
 import torch.distributed as dist
 import torch.nn.functional as F
@@ -78,14 +78,16 @@ def train(hyp, opt, device, tb_writer=None):
 	# Configure
 	cuda = device.type != 'cpu'
 	init_seeds(2 + rank)
-	with open(opt.data) as f:
-		data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
+	# with open(opt.data) as f:
+	# 	data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
 	# train_path = data_dict['train']
 	train_path = f'{opt.trainset_path}/images/train'
 	# test_path = data_dict['val']
 	test_path = f'{opt.trainset_path}/images/test'
-	nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
-	assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
+	# nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
+	nc = 1 if opt.single_cls else int(len(opt.classes))
+	names = opt.classes
+	# assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
 
 	# Remove previous results
 	if rank in [-1, 0]:
@@ -357,9 +359,11 @@ def train(hyp, opt, device, tb_writer=None):
 			final_epoch = epoch + 1 == epochs
 			if not opt.notest or final_epoch:  # Calculate mAP
 				results, maps, times = test.test(opt.data,
+												 opt=opt,
 												 batch_size=total_batch_size,
 												 imgsz=imgsz_test,
-												 save_json=final_epoch and opt.data.endswith(os.sep + 'coco.yaml'),
+												 # save_json=final_epoch and opt.data.endswith(os.sep + 'coco.yaml'),
+												 save_json=final_epoch and opt.trainset_path.endswith(os.sep + 'coco.yaml'),
 												 model=ema.ema.module if hasattr(ema.ema, 'module') else ema.ema,
 												 single_cls=opt.single_cls,
 												 dataloader=testloader,
@@ -445,7 +449,7 @@ def run(opt):
 	if opt.local_rank in [-1, 0]:
 		check_git_status()
 	opt.cfg = check_file(opt.cfg)  # check file
-	opt.data = check_file(opt.data)  # check file
+	# opt.data = check_file(opt.data)  # check file
 	if opt.hyp:  # update hyps
 		print('type(opt.hyp):', type(opt.hyp))
 		if isinstance(opt.hyp, str):

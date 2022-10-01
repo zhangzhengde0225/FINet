@@ -3,6 +3,7 @@ import glob
 import json
 import os
 import shutil
+from statistics import mode
 import sys
 from pathlib import Path
 pydir = Path(os.path.abspath(__file__)).parent
@@ -12,7 +13,7 @@ import torch
 import yaml
 from tqdm import tqdm
 
-sys.path.append(f'{pydir}/FINet')
+sys.path.append(f'{pydir}')
 
 from models.experimental import attempt_load
 from utils.datasets import create_dataloader
@@ -22,7 +23,9 @@ from utils.general import (
 from utils.torch_utils import select_device, time_synchronized
 
 
-def test(data,
+def test(
+		data,
+		opt=None,
 		 weights=None,
 		 batch_size=16,
 		 imgsz=640,
@@ -75,11 +78,13 @@ def test(data,
 	with open(data) as f:
 		data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
 	nc = 1 if single_cls else int(data['nc'])  # number of classes
+	
 	iouv = torch.linspace(0.5, 0.95, 10).to(device)  # iou vector for mAP@0.5:0.95
 	niou = iouv.numel()
 
 	# Dataloader
 	if not training:
+		print(model)
 		img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
 		_ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
 		path = data['test'] if opt.task == 'test' else data['val']  # path to val/test images
@@ -288,7 +293,8 @@ def get_opt():
 def run(opt):
 	print('opt:', opt)
 	if opt.task in ['val', 'test']:  # run normally
-		test(opt.data,
+		test(opt,
+			opt.source,
 			 opt.weights,
 			 opt.batch_size,
 			 opt.img_size,

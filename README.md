@@ -14,8 +14,8 @@ https://doi.org/10.1109/TIM.2022.3194909)
 #### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
 
 This is the official implemtentation of Foggy Insulator Network in the paper [FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5](https://doi.org/10.1109/TIM.2022.3194909)
-
-Please **star** this project if its helpful to you.
+ 
+Please **star** this project and **cite** this paper if its helpful to you.
 
 ![GA](https://zhangzhengde0225.github.io/images/FINet_GA.png)
 
@@ -34,45 +34,80 @@ Fig.1 Graphical Abstract of FINet.
 
 # Getting Started
 
-Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/tutorial.md).
+For `FINet`, the [HAI](https://code.ihep.ac.cn/zdzhang/hai) framework is used to provide simple dataset download, training, evaluation, inference and deployment functions. To install `hai`, run:
+
+```bash
+pip install hepai
+hai --version  # check the version
+```
 
 
-1. ##### Download Source Codes
+1. #### Get Source Codes
     ```bash
     git clone https://github.com/zhangzhengde0225/FINet.git
     cd FINet
+    pip install -r requirements.txt  # install dependencies
     ```
-2. ##### Download Datasets and Training Weights
 
-    You can download the Synthetic Foggy Insulator Dataset (SFID) mulitple ways, we recommend you to use the following command:
+2. #### Check dataset
+
+    To check the dataset by drawing labels into images, run:
     ```bash
-    # Install hepai
-    pip install hepai 
-
-    # View all datasets available
-    hai datasets info  
-    # download SFID, specify version by DATASET_NAME:VERSION, e.g. SFID:latest
-    hai datasets download SFID 
-    unzip SFID.zip
-    rm SFID.zip
+    python scripts/check_dataset.py
+        [-s --source DATASET_PATH]  # [optional] Default: data/SFID_demo
     ```
 
-    The dataset is unzipped to the `SFID` folder, and the training logs in the `runs` folder.
+3. #### Train model
 
-    For other download ways and the UPID and CPLID datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md)
-
-3. ##### Dependencies
-    You can simply set the environment via hai 
+    To train a model, run:
     ```bash
-    hai set-envs
+    python train.py
+        [-s --source DATASET_PATH]  # [optional] Default: data/SFID_demo
+        [-w --weights WEIGHTS_PATH]  # [optional] Default: None
+        [--epochs EPOCHS]  # [optional] Default: 3
+        [--batch-size BATCH_SIZE]  # [optional] Default: 32
+        [--device CPU/GPU]  # [optional] Default: GPU:0
+        [--img-size IMAGE_SIZE]  # [optional] Default: 640
     ```
+    After training, the model will be saved in `runs/exp/weights/last.pt`.
+    You can train the model with your own dataset by modifying the `--source` parameter.
 
-4. #### Training
+4. #### Get Datasets and Trained Weights
+
+    
+   We released the `Synthetic Foggy Insulator Dataset (SFID)` and `Trained logs & weights`,  download them by following command:
     ```bash
-    # train on SFID
-    python train.py --img 640 --batch 16 --epochs 300 --data SFID.yaml --weights yolov5s.pt --name yolov5s_results
+    python download.py [SFID|logs]  # Choice: SFID, logs
+        [--save-dor SAVE_DIR]  # [optional] Default: current directory
     ```
 
+    For other download ways and the previous [UPID](https://github.com/heitorcfelix/public-insulator-datasets) and [CPLID](https://github.com/InsulatorData/InsulatorDataSet) datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md).
+
+
+5. #### Evaluate
+    After training or download trained weights, you can evaluate the model by running:
+    ```bash
+    # evaluate the model on the test set
+    python evaluate.py
+        [--source DATASET_PATH]  # [optional] Default: data/SFID
+        [--weights TRAINED_WEIGHTS]  # [optional] Deafult: runs/se_m_ep99_fogged/weights/best.pt
+    ```
+
+6. #### Inference [TODO]
+   The `HAI` provides simple way to deploy the `FINet` by docker and remote inference `API`, which can be used to detect insulators in images or videos.
+    ```bash
+    # Deploy the FINet in docker
+    hai deploy --name FINet --image zhangzhengde0225/finet:latest
+
+    python inference.py 
+        [--source IMAGE_PATH]  # [optional] Default: data/SFID_demo/images/test/00400.jpg
+        [--weights TRAINED_WEIGHTS]  # [optional] Deafult: runs/se_m_ep99_fogged/weights/best.pt
+        [--device CPU/GPU]  # [optional] Default: GPU:0
+        [--img-size IMAGE_SIZE]  # [optional] Default: 640
+    ```
+    
+
+Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/tutorial.md).
 
 ## Training
 

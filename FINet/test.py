@@ -3,12 +3,17 @@ import glob
 import json
 import os
 import shutil
+from statistics import mode
+import sys
 from pathlib import Path
+pydir = Path(os.path.abspath(__file__)).parent
 
 import numpy as np
 import torch
 import yaml
 from tqdm import tqdm
+
+sys.path.append(f'{pydir}')
 
 from models.experimental import attempt_load
 from utils.datasets import create_dataloader
@@ -18,7 +23,9 @@ from utils.general import (
 from utils.torch_utils import select_device, time_synchronized
 
 
-def test(data,
+def test(
+		data,
+		opt=None,
 		 weights=None,
 		 batch_size=16,
 		 imgsz=640,
@@ -68,17 +75,21 @@ def test(data,
 
 	# Configure
 	model.eval()
-	with open(data) as f:
-		data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
-	nc = 1 if single_cls else int(data['nc'])  # number of classes
+	# with open(data) as f:
+	# 	data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
+	# nc = 1 if single_cls else int(data['nc'])  # number of classes
+	nc = 1 if single_cls else len(opt.classes)
+
 	iouv = torch.linspace(0.5, 0.95, 10).to(device)  # iou vector for mAP@0.5:0.95
 	niou = iouv.numel()
 
 	# Dataloader
 	if not training:
+		# print(model)
 		img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
 		_ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
-		path = data['test'] if opt.task == 'test' else data['val']  # path to val/test images
+		# path = data['test'] if opt.task == 'test' else data['val']  # path to val/test images
+		path = f'{opt.source}/images/test'
 		dataloader = create_dataloader(path, imgsz, batch_size, model.stride.max(), opt,
 									   hyp=None, augment=False, cache=False, pad=0.5, rect=True)[0]
 
@@ -278,12 +289,14 @@ def get_opt():
 	opt = parser.parse_args()
 	opt.save_json |= opt.data.endswith('coco.yaml')
 	opt.data = check_file(opt.data)  # check file
-	print(opt)
+
 	return opt
 
 def run(opt):
+	print('opt:', opt)
 	if opt.task in ['val', 'test']:  # run normally
-		test(opt.data,
+		test(opt.source,
+			opt,
 			 opt.weights,
 			 opt.batch_size,
 			 opt.img_size,
@@ -309,6 +322,35 @@ def run(opt):
 
 
 def policy(opt):
+
+	p = opt.policy
+	if p == 'p1':
+		plc = dict(
+			desc='native yolov5m ep99 fogged model test',
+			weights='runs/m_ep99_fogged/weights/last.pt',
+		)
+	elif p == 'p2':
+		plc = dict(
+			desc='native yolov5m ep99 without fog model test',
+			weights='runs/m_ep99_without_fog/weights/best.pt',
+		)
+	elif p == 'p3':
+		plc = dict(
+			desc='seyolov5 ep99 fogged model test',
+			weights='runs/se_m_ep99_fogged/weights/best.pt'
+		)
+	elif p == 'p4':
+		plc = dict(
+			weights='runs/se_m_ep300/weights/last.pt'
+		)
+	elif p == 'p5':
+		plc = dict(
+			weights='runs/se_m_reload300_ep200/weights/epoch078.pt'
+		)
+	else:
+		raise NotImplementedError(f'policy: {p} not implemented.')
+
+	opt.weights = plc.get('weights', opt.weights)
 
 	return opt
 

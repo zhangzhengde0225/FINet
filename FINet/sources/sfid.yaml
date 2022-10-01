@@ -7,6 +7,7 @@
 # val: '/dssg/home/acct-seezzde/seezzde/datasets/insulator/SFID/images/test'
 # number of classes
 val: /home/zzd/datasets/hai_datasets/SFID/images/test
+# val: /root/FINet/data/SFID/images/test
 
 nc: 2
 

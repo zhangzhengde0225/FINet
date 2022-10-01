@@ -11,6 +11,7 @@ pydir = Path(os.path.abspath(__file__)).parent  # current directory path of this
 from . import finet_configs
 from .finet_configs import hyp
 from FINet.train import run as run_train
+from FINet.test import run as run_test
 
 
 @MODULES.register()
@@ -21,10 +22,16 @@ class FINet(AbstractModule):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         """
-        Please set the default configuration of your model here
+        Please set the default train/eval/infer configurations of your model here
         """
-        self.default_cfg = finet_configs.get_opt()
-        self.config.merge(hyp)
+        self._train_cfg = finet_configs.get_train_config()
+        self._infer_cfg = finet_configs.get_inference_config()    
+        self._eval_cfg = finet_configs.get_evaluate_config()
+        self._mapping = finet_configs.mapping()
+        # self.mapping must be None or a dict, in which the key is the unified HAI config name, and the value is the original config name
+
+
+        # self.config.merge(hyp)
         # The default config can be a dict, json, yaml, a python config file or a config object from argparse
         # and it will be converted to a Config object automatically by the framework
         
@@ -39,8 +46,10 @@ class FINet(AbstractModule):
     def train(self, *args, **kwargs):
         """
         Please implement your model training here
+        for example:
+            run_train(self.mapped_config)
         """
-        run_train(self.config)
+        return run_train(self.mapped_config)
         # raise NotImplementedError(f'{self.name}.train() is not implemented, plese check the api: "{self.__module__}"')
 
     def infer(self, *args, **kwargs):
@@ -53,4 +62,5 @@ class FINet(AbstractModule):
         """
         Please implement your model evaluation here
         """
-        raise NotImplementedError(f'{self.name}.evaluate() is not implemented, plese check the api: "{self.__module__}"')
+        return run_test(self.config)
+        # raise NotImplementedError(f'{self.name}.evaluate() is not implemented, plese check the api: "{self.__module__}"')

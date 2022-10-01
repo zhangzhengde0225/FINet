@@ -2,12 +2,12 @@
 检查生成的SFID数据集
 """
 import os, sys
-from tkinter.messagebox import NO
 import numpy as np
 import cv2
 import damei as dm
 from pathlib import Path
 import random
+import argparse
 
 pydir = Path(os.path.abspath(__file__)).parent
 if f'{pydir.parent}' not in sys.path:
@@ -63,15 +63,13 @@ class CheckDataset(object):
 
 
 if __name__ == '__main__':
-    # dataset_path = "/home/zzd/datasets/insulator/SFID/fogged_v5_format"
-    dataset_path = f"{pydir.parent}/SFID_demo"
-    # dataset_path = '/home/zzd/datasets/hai_datasets/SFID'
-    # cd = CheckDataset(dp=dataset_path)
-    # cd()   
- 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-s', '--source', type=str, default='data/SFID_demo', help='source')
+   
+    opt = parser.parse_args()
 
     dm.data.check_YOLO(
-        dataset_path,
+        opt.source,
         trte='train',  # 'train' or 'test'
         save_dir=None, # None or 'path/to/save'
         classes=['insulator', 'broken_piece'], 
