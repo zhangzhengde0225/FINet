@@ -42,14 +42,14 @@ hai --version  # check the version
 ```
 
 
-1. #### Get Source Codes
+1. ## Get Source Codes
     ```bash
     git clone https://github.com/zhangzhengde0225/FINet.git
     cd FINet
     pip install -r requirements.txt  # install dependencies
     ```
 
-2. #### Check dataset
+2. ## Check dataset
 
     To check the dataset by drawing labels into images, run:
     ```bash
@@ -57,7 +57,7 @@ hai --version  # check the version
         [-s --source DATASET_PATH]  # [optional] Default: data/SFID_demo
     ```
 
-3. #### Train model
+3. ## Train model
 
     To train a model, run:
     ```bash
@@ -72,7 +72,7 @@ hai --version  # check the version
     After training, the model will be saved in `runs/exp/weights/last.pt`.
     You can train the model with your own dataset by modifying the `--source` parameter.
 
-4. #### Get Datasets and Trained Weights
+4. ## Get Datasets and Trained Weights
 
     
    We released the `Synthetic Foggy Insulator Dataset (SFID)` and `Trained logs & weights`,  download them by following command:
@@ -84,7 +84,7 @@ hai --version  # check the version
     For other download ways and the previous [UPID](https://github.com/heitorcfelix/public-insulator-datasets) and [CPLID](https://github.com/InsulatorData/InsulatorDataSet) datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md).
 
 
-5. #### Evaluate
+5. ## Evaluate
     After training or download trained weights, you can evaluate the model by running:
     ```bash
     # evaluate the model on the test set
@@ -93,7 +93,7 @@ hai --version  # check the version
         [--weights TRAINED_WEIGHTS]  # [optional] Deafult: runs/se_m_ep99_fogged/weights/best.pt
     ```
 
-6. #### Inference [TODO]
+6. ## Inference [TODO]
    The `HAI` provides simple way to deploy the `FINet` by docker and remote inference `API`, which can be used to detect insulators in images or videos.
     ```bash
     # Deploy the FINet in docker
@@ -109,73 +109,39 @@ hai --version  # check the version
 
 Detailed tutorials are available in [docs/tutorial.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/tutorial.md).
 
-## Training
 
-```
-cd FINet
-python train.py 
-```
-The main optional arguments:
-```
---trainset_path # trainset path
---batch-size    # batch size
---img-size      # image size
-```
+7. ## Synthetic fogging
 
-## Testing
+    You can use the `synthetic_fog.py` to generate foggy images. The fogging algorithm is based on the dark channel prior described in our paper, and the codes are availalbe now.
 
+    ```bash
+    python scripts/synthetic_fog.py
+        [-s --source INPUT_PATH]  # [optional] Default: data/SFID_demo/images/train/001040.jpg
+        [--save-dir OUTPUT_PATH]  # [optional] Default: None
+        [--speed_up NEED_SPEED_UP]  # Default: False
+    ```
 
-```
-cd home/FINet/FINet/
-
-#testset_path set: FINet/FINet/sources/sfid.yaml
-#foggy model inference
-
-python test.py --weights /home/datasets/insulator/runs/m_ep99_fogged/weights/best.pt
-
-#model without fog inference
-
-python test.py --weights /home/datasets/insulator/runs/m_ep99_without_fog/weights/best.pt
-
-#foggy model with SE module inference
-
-python test.py --weights /home/datasets/insulator/runs/se_m_ep99_fogged/weights/best.pt
-```
-
-## Synthetic fogging
-After you get the FINet code, type:
-
-```
-cd /home/FINet/FINet/scripts/  
-python synthetic_fog.py        # default 
-```
-The main optional arguments:
-```
---speed_up  #matrix optimization caculation
---img       #input image path
---out       #output image path
-```
-
+ 
 # Contributors
-FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
+The FINet is authored by Zheng-De Zhang\*, Bo Zhang,*, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu.
 
 Currently, it is maintained by Zheng-De Zhang (zdzhang@ihep.ac.cn) and Bo Zhang (zhangbo20@sjtu.edu.cn) 
- 
-Please feel free to contact us if you have any question.
+
+If you have any questions, please new an [issue](https://github.com/zhangzhengde0225/FINet/issues) or feel free contact us by email, thank you for your attention!
 
 Personal page of Zheng-De Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io)
 
 # Citation
 ```
 @article{FINet,
-author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu},
-title={FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5},
-journal={IEEE T INSTRUM MEAS},
-doi={10.1109/TIM.2022.3194909},
-year={2022},
+Title={FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5},
+Author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling Pei and Wen-Xian Yu},
+Journal={IEEE T INSTRUM MEAS},
+DOI={10.1109/TIM.2022.3194909},
+Year={2022},
 }
 ```
 
 # License
-FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
-For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.
+THe FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
+For commercial queries, please drop an e-mail to zdzhang@ihep.a.cn, we will send the detail agreement to you.
