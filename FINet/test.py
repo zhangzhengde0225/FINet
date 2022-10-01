@@ -3,25 +3,18 @@ import glob
 import json
 import os
 import shutil
-<<<<<<< HEAD
-from pathlib import Path
-=======
 from statistics import mode
 import sys
 from pathlib import Path
 pydir = Path(os.path.abspath(__file__)).parent
->>>>>>> main
 
 import numpy as np
 import torch
 import yaml
 from tqdm import tqdm
 
-<<<<<<< HEAD
-=======
 sys.path.append(f'{pydir}')
 
->>>>>>> main
 from models.experimental import attempt_load
 from utils.datasets import create_dataloader
 from utils.general import (
@@ -30,13 +23,9 @@ from utils.general import (
 from utils.torch_utils import select_device, time_synchronized
 
 
-<<<<<<< HEAD
-def test(data,
-=======
 def test(
 		data,
 		opt=None,
->>>>>>> main
 		 weights=None,
 		 batch_size=16,
 		 imgsz=640,
@@ -86,33 +75,21 @@ def test(
 
 	# Configure
 	model.eval()
-<<<<<<< HEAD
-	with open(data) as f:
-		data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
-	nc = 1 if single_cls else int(data['nc'])  # number of classes
-=======
 	# with open(data) as f:
 	# 	data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
 	# nc = 1 if single_cls else int(data['nc'])  # number of classes
 	nc = 1 if single_cls else len(opt.classes)
 
->>>>>>> main
 	iouv = torch.linspace(0.5, 0.95, 10).to(device)  # iou vector for mAP@0.5:0.95
 	niou = iouv.numel()
 
 	# Dataloader
 	if not training:
-<<<<<<< HEAD
-		img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
-		_ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
-		path = data['test'] if opt.task == 'test' else data['val']  # path to val/test images
-=======
 		# print(model)
 		img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
 		_ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
 		# path = data['test'] if opt.task == 'test' else data['val']  # path to val/test images
 		path = f'{opt.source}/images/test'
->>>>>>> main
 		dataloader = create_dataloader(path, imgsz, batch_size, model.stride.max(), opt,
 									   hyp=None, augment=False, cache=False, pad=0.5, rect=True)[0]
 
@@ -312,14 +289,6 @@ def get_opt():
 	opt = parser.parse_args()
 	opt.save_json |= opt.data.endswith('coco.yaml')
 	opt.data = check_file(opt.data)  # check file
-<<<<<<< HEAD
-	print(opt)
-	return opt
-
-def run(opt):
-	if opt.task in ['val', 'test']:  # run normally
-		test(opt.data,
-=======
 
 	return opt
 
@@ -328,7 +297,6 @@ def run(opt):
 	if opt.task in ['val', 'test']:  # run normally
 		test(opt.source,
 			opt,
->>>>>>> main
 			 opt.weights,
 			 opt.batch_size,
 			 opt.img_size,
@@ -355,8 +323,6 @@ def run(opt):
 
 def policy(opt):
 
-<<<<<<< HEAD
-=======
 	p = opt.policy
 	if p == 'p1':
 		plc = dict(
@@ -386,7 +352,6 @@ def policy(opt):
 
 	opt.weights = plc.get('weights', opt.weights)
 
->>>>>>> main
 	return opt
 
 
