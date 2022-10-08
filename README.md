@@ -79,6 +79,11 @@ hai --version  # check the version
         [--save-dor SAVE_DIR]  # [optional] Default: current directory
     ```
 
+    After `SFID` downloading, the dataset will be saved in `data/SFID`.
+    
+    After `logs` downloading, three trained logs and weights will be saved in `runs/xx`, and the `runs/se_m_ep99_fogged/weights/best.pt` will be used for evaluation by default.
+
+
     For other download ways and the previous [UPID](https://github.com/heitorcfelix/public-insulator-datasets) and [CPLID](https://github.com/InsulatorData/InsulatorDataSet) datasets, please refer to [docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md).
 
 
@@ -140,4 +145,10 @@ Year={2022},
 # License
 THe FINet and it's datasets is freely available for non-commercial use, and may be redistributed under these conditions. 
 For commercial queries, please drop an e-mail to zdzhang@ihep.a.cn, we will send the detail agreement to you.
+
+# TODO
++ Function: Inference
++ Fixbug: download: no hai/configs/urls.json [Fixed]
++ Fixbug: invalid cv2.imshow in docker
++ Fixbug: Synthetic fog invalid in docker
 

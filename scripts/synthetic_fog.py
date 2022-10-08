@@ -6,7 +6,6 @@ import os, sys
 from pathlib import Path
 import argparse
 import math
-from tkinter import N
 import cv2
 import copy
 import time
@@ -127,7 +126,7 @@ class SyntheticFog(object):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='synthetic_fog.py')
-    parser.add_argument('--speed_up', type='store_true', default=False, help='matrix optimization')
+    parser.add_argument('--speed_up', action='store_true', default=False, help='matrix optimization')
     parser.add_argument('--source', type=str, default= 'data/SFID_demo/images/train/001040.jpg', help='source img path')
     parser.add_argument('--save-dir', type=str, default=None, help='output img path')
     opt = parser.parse_args()

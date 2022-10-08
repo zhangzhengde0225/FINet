@@ -11,5 +11,8 @@ test_batch0_pred.jpg
 
 # data
 SFID/*
-data/SFID/*
+data/SFID
+data/SFID.zip
 runs/*
+runs.zip
+
