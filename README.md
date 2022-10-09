@@ -70,7 +70,7 @@ hai --version  # check the version
     After training, the model will be saved in `runs/exp/weights/last.pt`.
     You can train the model with your own dataset by modifying the `--source` parameter.
 
-4. ## Get Datasets and Trained Weights
+4. ## Download Datasets and Trained Weights
 
     
    We released the `Synthetic Foggy Insulator Dataset (SFID)` and `Trained logs & weights`,  download them by following command:
@@ -90,7 +90,7 @@ hai --version  # check the version
 5. ## Evaluate
     After training or download trained weights, you can evaluate the model by running:
     ```bash
-    # evaluate the model on the test set
+    # evaluate the model on the testset
     python evaluate.py
         [--source DATASET_PATH]  # [optional] Default: data/SFID
         [--weights TRAINED_WEIGHTS]  # [optional] Deafult: runs/se_m_ep99_fogged/weights/best.pt
@@ -139,6 +139,9 @@ Author={Zheng-De Zhang, Bo Zhang, Zhi-Cai Lan, Hai-Chun Liu, Dong-Ying Li, Ling 
 Journal={IEEE T INSTRUM MEAS},
 DOI={10.1109/TIM.2022.3194909},
 Year={2022},
+Pages={1-8},
+ISSN={0018-9456},
+Online_ISSN={1557-9662},
 }
 ```
 
