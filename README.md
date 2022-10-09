@@ -11,7 +11,7 @@ https://doi.org/10.1109/TIM.2022.3194909)
 
 # FINet
 
-#### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/master/docs/README_zh_cn.md)
+#### English | [简体中文](https://github.com/zhangzhengde0225/FINet/blob/main/docs/README_zh_cn.md)
 
 This is the official implemtentation of Foggy Insulator Network in the paper [FINet: An Insulator Dataset and Detection Benchmark Based on Synthetic Fog and Improved YOLOv5](https://doi.org/10.1109/TIM.2022.3194909)
  
