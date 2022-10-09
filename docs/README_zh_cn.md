@@ -28,7 +28,7 @@ Fig.1 FINet图形摘要
 
 # 开始
 
-对于`FINet`项目，我们采用了HAI](https://code.ihep.ac.cn/zdzhang/hai) 框架来提供简便的数据集下载、模型训练、评估、推理和部署等功能。
+对于`FINet`项目，我们采用了[HAI](https://code.ihep.ac.cn/zdzhang/hai) 框架来提供简便的数据集下载、模型训练、评估、推理和部署等功能。
 
 安装`hai`, 运行:
 
@@ -69,11 +69,7 @@ hai --version  # check the version
     训练后，模型将会存储在`runs/exp/weights/last.pt`.
 
 4. ## 下载数据集和训练好的权重
-    通过`hai`下载数据集和训练好的模型，运行：
-    ```bash
-    hai download FINet
-    hai download FINet --weights
-    ```
+5. 
     我们发布了`Synthetic Foggy Insulator Dataset (SFID)数据集`和`Trained logs & weights训练日志`, 通过如下命令下载它们：
     ```bash
     python download.py [SFID|logs]  # Choice: SFID, logs
@@ -86,7 +82,7 @@ hai --version  # check the version
     对于`SFID`的其他下载方法、前人的数据集[UPID](https://github.com/heitorcfelix/public-insulator-datasets)和[CPLID](https://github.com/InsulatorData/InsulatorDataSet)请查看[docs/dataset.md](https://github.com/zhangzhengde0225/FINet/blob/master/docs/datasets.md).
 
 
-5. ## 评估Evaluate
+6. ## 评估Evaluate
     
     训练后或下载好权重后，可以通过如下命令评估模型性能：
     ```bash
@@ -96,7 +92,7 @@ hai --version  # check the version
         [--weights TRAINED_WEIGHTS]  # [optional] Deafult: runs/se_m_ep99_fogged/weights/best.pt
     ```
 
-6. ## 推理Inference [TODO]
+7. ## 推理Inference [TODO]
    
    `HAI`框架提供了简单的部署`FINet`到容器中并通过远程调用的`API`，可用于从图像或视频中检测绝缘子：
     ```bash
@@ -110,7 +106,7 @@ hai --version  # check the version
         [--img-size IMAGE_SIZE]  # [optional] Default: 640
     ```
 
-7. ## Synthetic fog
+8. ## Synthetic fog
 
     如果想自己生成雾化图像，你可以使用`synthetic_fog.py`实现，运行：
     ```bash
@@ -130,6 +126,8 @@ FINet的作者是：[张正德]((https://zhangzhengde0225.github.io))，张博�
 目前由张正德(zdzhang@ihep.ac.cn)和张博(zhangbo20@sjtu.edu.cn)和维护。
 
 如果您有任何问题，请发起一个新[issue](https://github.com/zhangzhengde0225/FINet/issues)或随时与我们联系。
+
+如果本项目对您有帮助，请**star**本项目和**引用**本论文，谢谢！
 
 # 引用
 ```
